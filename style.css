@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: #ffffff;
+  }
+  .wrapper {
+    box-sizing: content-box;
+    width: 900px;
+    padding: 2.5em 3em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/lost-in-cosmos.appspot.com/o/bg1.png?alt=media&token=25cc1cab-d6cd-4cd2-b3d2-5971801462d1');
+    background-size: cover;
+    background-position: center;
+ 
+ 
+  }
+
+ 
+  .game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* 3 columns for a 4x3 grid */
+    gap: 0.6em;
+  }
+  .stats-container {
+    text-align: right;
+    margin-bottom: 0.3em;
+  }
+  .stats-container span {
+    font-weight: 600;
+  }
+  .card-container {
+    position: relative;
+    left: 20%;
+    top: 5%;
+    width: 10em; /* Adjust the card size as needed */
+    height: 10em; /* Adjust the card size as needed */
+    cursor: pointer;
+  }
+  
+  .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 15px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #3b20b2;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+  .card-before {
+    background-color: #ffffff;
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+  .card-after {
+    background-color: #732fbb;
+    transform: rotateY(180deg);
+  }
+  
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+  }
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+  .controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    top: 0;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/lost-in-cosmos.appspot.com/o/main_page.png?alt=media&token=a2291c84-f983-4229-b4bc-4ebc9c2da4f0');
+    background-size: 950px 712px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+  }
+  #stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background-color: #8c68c8;
+    color: #ffffff;
+  }
+  #start {
+    font-size: 1.5em;
+    display: block;
+    background-color: #eedc75;
+    color: #ffffff;
+    position: absolute;
+    transform: translate(0%,80%);
+
+  }
+  .controls-container button {
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+  }
+  .hide {
+    display: none;
+  }
+
+  #result h4 {
+    font-size: 1.5em;
+    text-align: right;
+    display: block;
+    background-image: url('bg/win.png'); /* Replace 'your-image-url.jpg' with the actual image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 800px; /* Set the desired width */
+    height: 600px;
+    z-index: 2;
+  }
+  
+  
+  
+  #moves-count, #time {
+    font-weight: 800;
+    color: #ffffff; /* Change this color to your desired color */
+    background-color: #cb77e0; /* Change this color to the background color you want */
+    
+    border-radius: 0.3em;
+    width: 8em; /* Set the desired width */
+    height: 1.5em; /* Set the desired height */
+    
+    text-align: center; /* Center the text within the box */
+    line-height: 1.5; /* Adjust line height if needed */
+    
+  }
+
+
+
+
