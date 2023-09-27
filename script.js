@@ -113,7 +113,7 @@ const generateRandom = () => {
             //check if winCount ==half of cardValues
             if (winCount == Math.floor(cardValues.length / 2)) {
               result.innerHTML = `
-                <a href="https://bamwaranya.github.io/Home-lessonAccess/">
+                <a href="https://bamwaranya.github.io/Home-lessonAccess/" target="_blank">
                   <h4>Moves: ${movesCount}  <br> Times: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}  </h4>
                 </a>`;
               stopGame();
